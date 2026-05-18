@@ -13,7 +13,7 @@ export default function ModalButton() {
         >
             Commencer
         </button>
-        {showModal && createPortal(<ModalContent  />, document.body)}
+        {showModal && createPortal(<ModalContent closeModal={() => setShowModal(false)}  />, document.body)}
     </>
   )
 }
