@@ -12,9 +12,13 @@ export default function Navbar() {
   const rightLinks = ['Jobs', 'Marchés'];
 
   return (
-    <nav className="bg-white px-4 lg:px-8 py-4">
+    <nav className="fixed w-full top-0 bg-white px-4 lg:px-8 py-4 flex justify-center items-center">
+
+      <ul>
+
+      </ul>
       {/* Desktop View */}
-      <div className="hidden lg:flex items-center w-full">
+      {/* <div className="hidden lg:flex items-center w-full">
         <div className="flex items-center space-x-2 text-[15px] font-semibold text-[#16008b]">
           {leftLinks.map((link) => (
             <div
@@ -34,10 +38,10 @@ export default function Navbar() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Mobile View Header */}
-      <div className="flex lg:hidden items-center justify-end">
+      {/* <div className="flex lg:hidden items-center justify-end">
         <button 
           onClick={() => setIsOpen(!isOpen)}
           className="text-[#16008b] p-2 focus:outline-none hover:bg-[#edeaf6]/50 rounded-full transition-colors"
@@ -51,10 +55,10 @@ export default function Navbar() {
             )}
           </svg>
         </button>
-      </div>
+      </div> */}
 
       {/* Mobile Menu Expanded */}
-      {isOpen && (
+      {/* {isOpen && (
         <div className="lg:hidden mt-4 flex flex-col space-y-2 text-[15px] font-semibold text-[#16008b]">
           {leftLinks.map((link) => (
             <div
@@ -73,8 +77,8 @@ export default function Navbar() {
             </div>
           ))}
         </div>
-      )}
+      )} */}
     </nav>
   );
 }
-
+

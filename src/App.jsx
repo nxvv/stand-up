@@ -8,9 +8,9 @@ function App() {
   return (
     <div className='min-h-screen bg-blue-50'>
       <Navbar />
-      <div className="pt-10">
+      {/* <div className="pt-10">
         <ModalButton />
-      </div>
+      </div> */}
     </div>
   )
 }
