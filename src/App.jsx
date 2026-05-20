@@ -1,16 +1,17 @@
 import './components/modals/ModalButton'
 import './App.css'
-import ModalButton from './components/modals/ModalButton'
 import Navbar from './components/Navbar'
+import TimerCard from './components/TimerCard'
 
 function App() {
-
   return (
-    <div className='min-h-screen bg-blue-50 font-poppins'>
+    <div className="min-h-screen bg-blue-50 font-poppins">
       <Navbar />
-      {/* <div className="pt-10">
-        <ModalButton />
-      </div> */}
+      
+      {/* Timer Section Container */}
+      <main className="pt-28 pb-12 px-4 flex justify-center items-center min-h-[calc(100vh-80px)]">
+        <TimerCard />
+      </main>
     </div>
   )
 }
