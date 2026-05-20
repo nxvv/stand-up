@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 function App() {
 
   return (
-    <div className='min-h-screen bg-blue-50'>
+    <div className='min-h-screen bg-blue-50 font-poppins'>
       <Navbar />
       {/* <div className="pt-10">
         <ModalButton />

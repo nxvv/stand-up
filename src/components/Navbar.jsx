@@ -13,10 +13,15 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full top-0 bg-white px-4 lg:px-8 py-4 flex justify-center items-center">
-
-      <ul>
-
+      <ul className='w-full md:w-xl flex justify-between items-center font-medium'>
+        <li className='text-[#16008b] p-2 text-xl font-medium italic'>
+          Stand Up
+        </li>
+        <li className='bg-[#16008b] text-[15px] font-medium text-blue-100 rounded-full px-5 py-2.5 cursor-pointer hover:text-white hover:bg-[#1e05b1]'>
+          Inscrivez vous
+        </li>
       </ul>
+      
       {/* Desktop View */}
       {/* <div className="hidden lg:flex items-center w-full">
         <div className="flex items-center space-x-2 text-[15px] font-semibold text-[#16008b]">
