@@ -7,7 +7,7 @@ export default function TimerCard() {
         <div className="flex items-center justify-center gap-4 mt-6">
           {/* Main Action Button */}
           <button
-            className="px-7 py-3.5 bg-[#16008b] text-white font-medium text-xs md:text-lg rounded-2xl shadow-lg shadow-indigo-200 hover:bg-[#1e05b1] hover:shadow-indigo-300 transition-all duration-200 cursor-pointer active:scale-95 text-center uppercase tracking-wide"
+            className="px-7 py-3.5 bg-[#16008b] text-white font-medium text-xs md:text-lg rounded-2xl shadow-lg shadow-black-200 hover:bg-[#1e05b1] hover:shadow-black-300 transition-all duration-200 cursor-pointer active:scale-95 text-center uppercase tracking-wide"
           >
             Démarrer
           </button>
