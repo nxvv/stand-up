@@ -1,27 +1,28 @@
-import { useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function SearchInput() {
 
-  // const [isTyping, setIsTyping] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [debouncedTerm, setDebouncedTerm] = useState('');
 
-  const typingTimer = useRef(null);
-
-  function handleChange()
-  {
-    // setIsTyping(true);
-
-    clearTimeout(typingTimer.current);
-
-    typingTimer.current = setTimeout(() => {
-      // setIsTyping(false);
-      alert('API CALL');
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedTerm(searchTerm)
     }, 1000);
-  }
+
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
+
+  useEffect(() => {
+    if(debouncedTerm) {
+      alert('API CALL');
+    }
+  }, [debouncedTerm]);
 
   return (
     <div className="relative w-full max-w-md">
       <input
-        onChange={handleChange}
+        onChange={e => setSearchTerm(e.currentTarget.value)}
         type="text"
         placeholder="Search"
         className="w-full rounded-lg border-2 border-gray-300 bg-white py-2 px-4 text-base transition-colors hover:border-gray-400 focus:border-blue-500 focus:bg-blue-50 focus:outline-none"
