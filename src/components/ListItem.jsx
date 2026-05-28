@@ -11,15 +11,32 @@ export default function ListItem() {
     item6 : false,
   });
 
+  const [lastCheckedItem, setLastCheckedItem] = useState("");
+  const [numberOfChecked, setNumberOfChecked] = useState(0);
+
   function handleChange(e)
   {
-    setCheckedItems({
-      ...checkedItems, 
-      [e.target.id] : e.target.checked
-    });
+    if(numberOfChecked == 3) {
+      setCheckedItems({
+        ...checkedItems, 
+        [e.target.id] : e.target.checked,
+        [lastCheckedItem] : false
+      });
+    } else {
+      setCheckedItems({
+        ...checkedItems, 
+        [e.target.id] : e.target.checked
+      });
+    }
+
+    if (e.target.checked) {
+      setLastCheckedItem(e.target.id)
+      if (numberOfChecked < 3) setNumberOfChecked(numberOfChecked + 1)
+    } else {
+      setNumberOfChecked(numberOfChecked - 1)
+    }
     
   }
-
 
   return (
     <div className="w-full max-w-2xl mx-auto">
