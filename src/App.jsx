@@ -1,12 +1,14 @@
 import './components/modals/ModalButton'
 import './App.css'
-import SearchInput from './components/SearchInput'
+import ListItem from './components/ListItem'
+// import SearchInput from './components/SearchInput'
 // import Navbar from './components/Navbar'
 // import TimerCard from './components/TimerCard'
 
 function App() {
   return (
-    <SearchInput />
+    <ListItem />
+    // <SearchInput />
     // <div className="min-h-screen bg-blue-50 font-poppins">
       
       
